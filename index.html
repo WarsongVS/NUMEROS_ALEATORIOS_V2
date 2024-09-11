@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Galácticos</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+        input, button { padding: 10px; margin: 5px; width: 80%; }
+        button { cursor: pointer; background-color: #007BFF; color: white; border: none; }
+        table { margin: 20px auto; border-collapse: collapse; }
+        td { border: 1px solid black; padding: 10px; text-align: center; width: 100px; height: 100px; }
+        img { width: 50px; height: 50px; }
+        .highlight { background-color: yellow; }
+    </style>
+</head>
+<body>
+    <h1>Generador de Galácticos</h1>
+
+    <label for="participants">Cantidad de participantes</label><br>
+    <input type="number" id="participants" min="1" max="30" value="10"><br>
+
+    <label for="quantity">Cantidad de números:</label><br>
+    <input type="number" id="quantity" min="1" value="3"><br>
+
+    <label for="minValue">Valor mínimo:</label><br>
+    <input type="number" id="minValue" value="1"><br>
+
+    <label for="maxValue">Valor máximo:</label><br>
+    <input type="number" id="maxValue" value="10"><br>
+
+    <button id="generateTableBtn">Generar tabla de dinámica</button>
+    <button id="generateBtn">Generar Galácticos</button>
+
+    <h1 id="tableTitle" style="display:none;">Lista de Galácticos</h1>
+
+    <div id="resultArea"></div>
+    <button id="clearBtn">Limpiar</button>
+    <button id="exportPdfBtn">Exportar a PDF</button>
+    <button id="exportJpgBtn">Exportar a JPG</button>
+
+    <!-- Incluye las librerías de html2pdf y html2canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
